@@ -2,7 +2,7 @@ Summary:	Advanced Package Tool for get sex-pictures from the net
 Summary(pl):	Narzêdzie do ³atwego pobierania nieprzyzwoitych obrazków :-)
 Name:		porn-get
 Version:	0.4.0
-Release:	8
+Release:	9
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://www.linuks.mine.nu/porn-get/%{name}-%{version}.tar.bz2
