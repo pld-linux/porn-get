@@ -1,0 +1,38 @@
+--- porn-get.orig	Tue Apr 23 22:38:56 2002
++++ porn-get	Tue Apr 23 22:45:34 2002
+@@ -4,7 +4,7 @@
+ #therefore i made ${what}-get (werks almost like debian's apt-get)
+ 
+ #this is free software, distributed under GNU GPL ver. 2.0 or later
+-#tarzeau, gnu@fuckmicrosoft.com, www.linuks.mine.nu
++#tarzeau, gnu@fuckmicrosoft.com, www.lesbian.mine.nu
+ 
+ version="0.4.0"
+ what=`basename $0 |sed s/-.*//`
+@@ -59,7 +59,7 @@
+ 	lynx -dump "$url" |grep -E "tp://|tps://" |grep -i "$fileext" |while read num file; do
+ 	    if [ ! -e `basename $file` ]; then
+ 		echo -ne "getting `basename $file`... "
+-		echo $file | xargs --max-procs=10 -n 1 wget --referer $url"/" -U "www.linuks.mine.nu/${what}-get" -nv -c -o /dev/null >/dev/null
++		echo $file | xargs --max-procs=10 -n 1 wget --referer $url"/" -U "www.lesbian.mine.nu/${what}-get" -nv -c -o /dev/null >/dev/null
+ 		if [ $? = 0 ]; then echo "ok"; else echo "error"; fi
+ 	    else
+ 		echo skipping `basename $file`...
+@@ -73,7 +73,7 @@
+     
+     update)
+ 	if [ -f ${dir}${conf} ]; then mv ${dir}${conf} ${dir}${conf}.old; fi
+-	wget -U "www.linuks.mine.nu/${what}-get" http://www.linuks.mine.nu/${what}-get/${what}.conf
++	wget -U "www.lesbian.mine.nu/" http://www.lesbian.mine.nu/${what}.conf
+ 	mv ${conf} ${dir}
+     ;;
+     
+@@ -83,7 +83,7 @@
+ 		echo
+ 		exit 1
+ 	fi
+-	lynx --dump "http://www.linuks.mine.nu/${what}-get/${what}-give.cgi?desc=$2&url=$3&type=$4"
++	lynx --dump "http://www.lesbian.mine.nu/${what}-give.cgi?desc=$2&url=$3&type=$4"
+     ;;
+     
+     remove)
