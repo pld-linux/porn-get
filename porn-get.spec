@@ -6,6 +6,7 @@ Release:	7
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://www.linuks.mine.nu/porn-get/%{name}-%{version}.tar.bz2
+# Source0-md5:	147e18656dbdb8d9e69eadad33bd17c8
 Patch0:		%{name}-filebyfile.patch
 Patch1:		%{name}-INSTALL-ALL.patch
 Patch2:		%{name}-PLD.patch
