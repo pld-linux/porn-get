@@ -13,8 +13,14 @@ Patch1:		%{name}-INSTALL-ALL.patch
 Patch2:		%{name}-PLD.patch
 Patch3:		porn-cache-PLD.patch
 Requires:	bash
-Requires:	wget
+Requires:	fileutils
+Requires:	findutils
+Requires:	grep
 Requires:	lynx
+Requires:	sed
+Requires:	sh-utils
+Requires:	textutils
+Requires:	wget
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
