@@ -5,8 +5,6 @@ Version:	0.4.0
 Release:	6
 License:	GPL
 Group:		Applications/Archiving
-Group(de):	Applikationen/Archivierung
-Group(pl):	Aplikacje/Archiwizacja
 Source0:	http://www.linuks.mine.nu/porn-get/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-filebyfile.patch
 Patch1:		%{name}-INSTALL-ALL.patch
