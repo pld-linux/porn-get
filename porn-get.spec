@@ -5,6 +5,8 @@ Version:	0.4.0
 Release:	1
 License:	GPL
 Group:		Applications/Archiving
+Group(de):	Applikationen/Archivierung
+Group(pl):	Aplikacje/Archiwizacja
 Source0:	http://www.linuks.mine.nu/porn-get/%{name}-%{version}.tar.bz2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	bash
@@ -24,8 +26,8 @@ Wiedza o seksie jest bardzo wa¿na dla spo³eczeñstwa.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-mkdir -p $RPM_BUILD_ROOT%{_bindir}
-mkdir -p $RPM_BUILD_ROOT%{_mandir}/man1
+install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT%{_mandir}/man1
 
 install	porn-get	$RPM_BUILD_ROOT%{_bindir}
 install porn-cache 	$RPM_BUILD_ROOT%{_bindir}
