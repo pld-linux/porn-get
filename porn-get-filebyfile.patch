@@ -1,0 +1,21 @@
+*** porn-get	Sat Aug 25 19:18:20 2001
+--- porn-get.new	Fri Feb  1 23:03:26 2002
+***************
+*** 41,49 ****
+  	lynx -dump "$url" |grep -E "tp://|tps://" |grep -i "$fileext" |while read num file; do
+  	    if [ ! -e `basename $file` ]; then
+  		echo -ne "getting `basename $file`... "
+! 		wget --referer $url"/" -U "www.linuks.mine.nu/${what}-get" -nv -b -c $file -o /dev/null >/dev/null
+! 		#for slow connections use following and comment above
+! 		#echo $file | xargs --max-procs=10 -n 1 wget --referer $url"/" -U "www.linuks.mine.nu/${what}-get" -nv -c -o /dev/null >/dev/null
+  		if [ $? = 0 ]; then echo "ok"; else echo "error"; fi
+  	    else
+  		echo skipping `basename $file`...
+--- 41,47 ----
+  	lynx -dump "$url" |grep -E "tp://|tps://" |grep -i "$fileext" |while read num file; do
+  	    if [ ! -e `basename $file` ]; then
+  		echo -ne "getting `basename $file`... "
+! 		echo $file | xargs --max-procs=10 -n 1 wget --referer $url"/" -U "www.linuks.mine.nu/${what}-get" -nv -c -o /dev/null >/dev/null
+  		if [ $? = 0 ]; then echo "ok"; else echo "error"; fi
+  	    else
+  		echo skipping `basename $file`...
