@@ -2,12 +2,13 @@ Summary:	Advanced Package Tool for get sex-pictures from the net
 Summary(pl):	Narzêdzie do ³atwego pobierania nieprzyzwoitych obrazków :-)
 Name:		porn-get
 Version:	0.4.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Archiving
 Group(de):	Applikationen/Archivierung
 Group(pl):	Aplikacje/Archiwizacja
 Source0:	http://www.linuks.mine.nu/porn-get/%{name}-%{version}.tar.bz2
+Patch0:		%{name}-filebyfile.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	bash
 Requires:	wget
@@ -22,6 +23,7 @@ Wiedza o seksie jest bardzo wa¿na dla spo³eczeñstwa.
 
 %prep
 %setup -q
+%patch -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
