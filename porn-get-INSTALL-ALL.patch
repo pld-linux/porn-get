@@ -1,0 +1,50 @@
+*** porn-get	Fri Feb  1 23:13:41 2002
+--- porn-get.new	Sat Feb  2 00:40:02 2002
+***************
+*** 31,36 ****
+--- 31,45 ----
+  		exit 1
+  	fi
+  
++ 	#install all
++ 	if [ "$2" = "all" ]; then
++ 	
++ 	echo "${what}-get will install all packages... Go for pizza or something..."
++ 	cat ${dir}${conf} | grep -v "^#" | while read pkg url fileext; do ${what}-get install $pkg;
++ 	done
++ 	fi
++ 	
++ 	# install package
+  	cat ${dir}${conf} |grep -v "^#" |grep "^$2 " |while read pkg url fileext; do
+  
+  	echo "please wait..."
+***************
+*** 50,56 ****
+  	wait
+  	find $dir -name $2 -empty -exec rm -r -- '{}' \;
+  	cd -
+- 
+  	done
+      ;;
+      
+--- 59,64 ----
+***************
+*** 114,119 ****
+--- 122,128 ----
+      *)
+  	echo "$what $version for everything with bash/lynx/wget"
+          echo "usage: ${what}-get install package"
++ 	echo "usage: ${what}-get install all"
+  	echo "       ${what}-get update"
+          echo "       ${what}-get remove package"
+  	echo "       ${what}-get share package url type"
+***************
+*** 127,132 ****
+--- 136,142 ----
+          echo "update - will update your ${what}.conf databases"
+          echo "remove - will remove a package"
+  	echo "share - submit own package"
++ 	echo "install all - will install all packages (PLD only)"
+  	echo "                       This ${what} has Super Cow Powers."
+          echo
+      ;;
