@@ -10,11 +10,11 @@ Group(pl):	Aplikacje/Archiwizacja
 Source0:	http://www.linuks.mine.nu/porn-get/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-filebyfile.patch
 Patch1:		%{name}-INSTALL-ALL.patch
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	bash
 Requires:	wget
 Requires:	lynx
 BuildArch:	noarch
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Sexual education is important for humanity.
@@ -29,13 +29,11 @@ Wiedza o seksie jest bardzo wa¿na dla spo³eczeñstwa.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_mandir}/man1
+install	porn-get porn-cache $RPM_BUILD_ROOT%{_bindir}
+install porn.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-install	porn-get	$RPM_BUILD_ROOT%{_bindir}
-install porn-cache 	$RPM_BUILD_ROOT%{_bindir}
-install porn.1	$RPM_BUILD_ROOT%{_mandir}/man1
 gzip -9nf {readme,changelog}
 
 %clean
@@ -43,6 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-%doc readme.gz changelog.gz
