@@ -44,13 +44,12 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 install	porn-get porn-cache $RPM_BUILD_ROOT%{_bindir}
 install porn.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf {readme,changelog}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc {readme,changelog}
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
