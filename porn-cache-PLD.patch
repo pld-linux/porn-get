@@ -1,0 +1,20 @@
+*** porn-cache	Sat Aug 25 19:15:00 2001
+--- porn-cache.new	Sat Feb  2 22:51:31 2002
+***************
+*** 6,12 ****
+  version="0.4.0"
+  what=`basename $0 |sed s/-.*//`
+  conf="${what}.conf"
+! dir="./"
+  #dir="/usr/share/${what}-get/"
+  
+  if [ ! -f ${dir}${conf} ]; then
+--- 6,13 ----
+  version="0.4.0"
+  what=`basename $0 |sed s/-.*//`
+  conf="${what}.conf"
+! #photodir="$HOME/.${what}-get/photos/"
+! dir="$HOME/.${what}-get/"
+  #dir="/usr/share/${what}-get/"
+  
+  if [ ! -f ${dir}${conf} ]; then
