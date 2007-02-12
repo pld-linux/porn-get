@@ -1,5 +1,5 @@
 Summary:	Advanced Package Tool for get sex-pictures from the net
-Summary(pl):	Narzêdzie do ³atwego pobierania nieprzyzwoitych obrazków :-)
+Summary(pl.UTF-8):   NarzÄ™dzie do Å‚atwego pobierania nieprzyzwoitych obrazkÃ³w :-)
 Name:		porn-get
 Version:	0.5.1
 Release:	0.1
@@ -27,8 +27,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Sexual education is important for humanity.
 
-%description -l pl
-Wiedza o seksie jest bardzo wa¿na dla spo³eczeñstwa.
+%description -l pl.UTF-8
+Wiedza o seksie jest bardzo waÅ¼na dla spoÅ‚eczeÅ„stwa.
 
 %prep
 %setup -q -n %{name}_%{version}
