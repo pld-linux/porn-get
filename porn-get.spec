@@ -1,5 +1,5 @@
 Summary:	Advanced Package Tool for get sex-pictures from the net
-Summary(pl.UTF-8):   Narzędzie do łatwego pobierania nieprzyzwoitych obrazków :-)
+Summary(pl.UTF-8):	Narzędzie do łatwego pobierania nieprzyzwoitych obrazków :-)
 Name:		porn-get
 Version:	0.5.1
 Release:	0.1
