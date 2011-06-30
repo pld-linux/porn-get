@@ -2,7 +2,7 @@ Summary:	Advanced Package Tool for get sex-pictures from the net
 Summary(pl.UTF-8):	Narzędzie do łatwego pobierania nieprzyzwoitych obrazków :-)
 Name:		porn-get
 Version:	0.5.1
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Applications/Archiving
 Source0:	http://www.lesbian.mine.nu/%{name}_%{version}.tar.gz
