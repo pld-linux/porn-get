@@ -32,11 +32,11 @@ Wiedza o seksie jest bardzo ważna dla społeczeństwa.
 
 %prep
 %setup -q -n %{name}_%{version}
-#%patch0 -p0
-#%patch1 -p0
-#%patch2 -p0
+#%%patch0 -p0
+#%%patch1 -p0
+#%%patch2 -p0
 %patch -P3 -p0
-#%patch4 -p0
+#%%patch4 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
