@@ -35,7 +35,7 @@ Wiedza o seksie jest bardzo ważna dla społeczeństwa.
 #%patch0 -p0
 #%patch1 -p0
 #%patch2 -p0
-%patch3 -p0
+%patch -P3 -p0
 #%patch4 -p0
 
 %install
